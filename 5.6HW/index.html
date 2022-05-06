@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+
+    <body>
+
+<h1>5,6</h1>
+
+<p>Загрузка изображения</p>
+<input type="text" name="input" class="swith" placeholder="Введите ширину">
+<input type="text" name="input" class="sheight" placeholder="Введите высоту">
+<div class="kartinka" ></div>
+<button class="btn j-btn">Запросить картинку</button>
+
+
+<style>
+    .btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  
+  margin: 5px 10px;
+  padding: 10px 15px;
+  border-radius: 1px;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: white;
+  background: #315efb;
+  transition: 0.3s;
+}
+.kartinka{
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.btn:hover {
+  box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+  transform: scale(1.05);
+}
+</style>
+
+
+<script src="5.6.js"></script>
+</body>
+</html>
+
+
+Приложение, интерфейс которого представляет собой 2 input и кнопку.
+В input можно ввести любое число. При клике на кнопку происходит следующее:
+     Если оба числа не попадают в диапазон от 100 до 300 или введено не число — выводится ниже
+     текст «одно из чисел вне диапазона от 100 до 300»;
+     Если числа попадают в диапазон от 100 до 300 — производится запрос c помощью fetch
+     по URL https://picsum.photos/200/300, где первое число — ширина картинки, второе — высота.
+ Пример: если пользователь ввёл 150 и 200, то запрос будет вида https://picsum.photos/150/200.
+ После получения данных выводится ниже картинка на экран.
